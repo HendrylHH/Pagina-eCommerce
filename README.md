@@ -36,4 +36,3 @@ Este projeto é uma página de produto de e-commerce desenvolvida com React, Typ
 ## Créditos
 
 Este projeto foi criado como uma demonstração das capacidades do React e Tailwind CSS para uma página de produto de ecommerce. Tratamos aqui apenas de funcionalidades, sem praticar tanto o frontend.
-```
