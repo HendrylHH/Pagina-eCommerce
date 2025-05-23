@@ -62,7 +62,9 @@ const CalculadoraFrete: React.FC<PropsCalculadoraFrete> = ({ aoCalcularFrete }) 
   const aoMudarCep = (e: React.ChangeEvent<HTMLInputElement>) => {
     const valor = e.target.value;
     const cepFormatado = formatarCep(valor);
-    setValue('codigoPostal', cepFormatado);        // Se o campo estiver vazio, limpar as informações de frete
+    setValue('codigoPostal', cepFormatado);
+    
+    // Se o campo estiver vazio, limpar as informações de frete
     if (!valor.trim()) {
       setInfoFrete(null);
       // Notifica o componente pai que o frete foi removido
@@ -72,12 +74,6 @@ const CalculadoraFrete: React.FC<PropsCalculadoraFrete> = ({ aoCalcularFrete }) 
     }
   };
   
-  // Função para garantir acesso seguro às propriedades
-  const obterValorSeguro = (obj: any, propriedade: string, alternativa: string): string => {
-    if (!obj) return alternativa;
-    return obj[propriedade] || alternativa;
-  };
-
   return (
     <div className="mt-6 border rounded-lg p-4 bg-gray-50">
       <h3 className="text-lg font-medium text-gray-900">Calcular Frete</h3>
